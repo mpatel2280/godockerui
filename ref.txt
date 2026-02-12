@@ -1,0 +1,12 @@
+go mod init godockerui
+go mod tidy 
+
+
+go get github.com/docker/docker/client
+go get github.com/docker/docker/api/types
+
+
+-------------------------------------------------------------------------------
+Lets create  golang based project which simulate  Portainer types of docker ui
+
+-------------------------------------------------------------------------------

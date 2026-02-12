@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoDockerUI</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <h1>GoDockerUI</h1>
+      <p>Portainer-style demo</p>
+      <nav>
+        <button class="nav-btn active" data-tab="containers">Containers</button>
+        <button class="nav-btn" data-tab="images">Images</button>
+      </nav>
+      <small id="modeBadge" class="mode-badge">Loading...</small>
+    </aside>
+
+    <main class="main">
+      <section class="stats" id="stats"></section>
+
+      <section id="containersTab" class="panel">
+        <div class="panel-header">
+          <h2>Containers</h2>
+          <button id="refreshContainers">Refresh</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Image</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="containersBody"></tbody>
+        </table>
+      </section>
+
+      <section id="imagesTab" class="panel hidden">
+        <div class="panel-header">
+          <h2>Images</h2>
+          <button id="refreshImages">Refresh</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Tag</th>
+              <th>Size (MB)</th>
+            </tr>
+          </thead>
+          <tbody id="imagesBody"></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
