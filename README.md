@@ -15,6 +15,8 @@ Go-based Docker dashboard that simulates a Portainer-like UI.
 ```bash
 go mod tidy
 go run ./cmd/server
+OR 
+docker-compose up --build -d
 ```
 
 Open `http://localhost:8080`.
